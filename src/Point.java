@@ -4,10 +4,10 @@ public class Point {
     private int y;
     private String label;
 
-    public Point(int x, int y, String label){
+    public Point(String label, int x, int y){
+        this.label=label;
         this.x=x;
         this.y=y;
-        this.label=label;
     }
 
     @Override
@@ -22,7 +22,7 @@ public class Point {
         }
 
         Point other = (Point) j;
-
+        return(this.x==other.x) && (this.y==other.y);
     }
 
 }
